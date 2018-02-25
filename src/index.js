@@ -11,7 +11,7 @@ module.exports = function getZerosCount(number, base) {
                 intermediate = Math.trunc(intermediate / i);
                 sum += intermediate;
             }
-            result = Math.min(result, Math.trunc(sum / power));
+            result = Math.min(Math.trunc(sum / power), result);
         }
     }
     return result;
